@@ -65,7 +65,7 @@ export default async function Countries({
               {
                 label: "Maps",
                 value: (
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 flex-wrap">
                     <Button
                       as={Link}
                       href={findedFirst.maps && findedFirst.maps.googleMaps}
