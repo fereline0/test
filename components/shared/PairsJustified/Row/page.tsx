@@ -7,7 +7,7 @@ interface Row extends IRow {
 export default function Row(props: Row) {
   return (
     <div
-      className="flex gap-[${}] justify-between flex-wrap"
+      className="flex justify-between flex-wrap"
       style={{
         gap: `${props.y}px`,
       }}
