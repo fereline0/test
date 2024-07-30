@@ -32,7 +32,7 @@ export default async function Countries({
             data={[
               {
                 label: "Capital",
-                value: findedFirst.capital[0],
+                value: findedFirst.capital && findedFirst.capital[0],
               },
               {
                 label: "Region",
@@ -48,7 +48,9 @@ export default async function Countries({
               },
               {
                 label: "Currencies",
-                value: Object.keys(findedFirst.currencies).join(", "),
+                value:
+                  findedFirst.currencies &&
+                  Object.keys(findedFirst.currencies).join(", "),
               },
               {
                 label: "Start of week",
@@ -56,16 +58,24 @@ export default async function Countries({
               },
               {
                 label: "Languages",
-                value: Object.keys(findedFirst.languages).join(", "),
+                value:
+                  findedFirst.languages &&
+                  Object.keys(findedFirst.languages).join(", "),
               },
               {
                 label: "Maps",
                 value: (
                   <div className="flex gap-2">
-                    <Button as={Link} href={findedFirst.maps.googleMaps}>
+                    <Button
+                      as={Link}
+                      href={findedFirst.maps && findedFirst.maps.googleMaps}
+                    >
                       Open in Google Maps
                     </Button>
-                    <Button as={Link} href={findedFirst.maps.openStreetMaps}>
+                    <Button
+                      as={Link}
+                      href={findedFirst.maps && findedFirst.maps.openStreetMaps}
+                    >
                       Open in Open Street Maps
                     </Button>
                   </div>
