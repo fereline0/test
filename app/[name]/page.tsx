@@ -13,8 +13,6 @@ export default async function Countries({
 
   const findedFirst = country[0];
 
-  console.log(findedFirst);
-
   return (
     <Card shadow="none" key={findedFirst.cca2}>
       <CardBody>
